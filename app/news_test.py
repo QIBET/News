@@ -25,10 +25,10 @@ class SourceTest(unittest.TestCase):
         '''
         Method to run before test
         '''
-        self.new_source = Source("Benard","The palestinian War","Been going on for long","https://mw3.wsj.net/mw5/content/logos/mw_logo_social.png","2021-12-03","Nyatanyau has had his full force felt",)
+        self.new_source = Source("abc-news","ABC News","Your trusted source for breaking news","https://abcnews.go.com")
         
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_article,Article))
+        self.assertTrue(isinstance(self.new_source,Source))
     
     if __name__ == '__main__':
      unittest.main()
