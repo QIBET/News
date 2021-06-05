@@ -7,4 +7,5 @@ def index():
     '''
     Function that returns the index page and its data
     '''
-    return render_template('index.html')
+    title = 'Home - News Site'
+    return render_template('index.html', title = title)
