@@ -1,4 +1,4 @@
-from app.news_test import Source
+from app import app
 from app import app
 import urllib.request,json
 from .models import article
@@ -13,3 +13,5 @@ Source = source.Source
 api_key = app.config['NEWS_API_KEY']
 
 #getting the article_url
+source_url = app.config['SOURCE_URL']
+articles_url = app.config['ARTICLES_URL']
