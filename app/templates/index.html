@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title%}
-        <title>{{title}}</title>
-        {% else %}
-        <title>News Site</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Bonjour Bernard</h1>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title%}
+    <title>{{title}}</title>
+    {% else %}
+    <title>News Site</title>
+    {% endif %}
+  </head>
+  <body>
+    <!-- General News Section  -->
+    <h3> </h3>
+    <ul>
+       {% for source_news in newsList  %}
+           <li>{{ source_news.name}}</li>
+       {% endfor %}
+   </ul>
+  </body>
 </html>
