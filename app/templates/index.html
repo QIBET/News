@@ -1,3 +1,4 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 <!doctype html>
 <html lang="en">
@@ -12,10 +13,9 @@
     {% endif %}
   </head>
   <body>
-    <!-- General News Section  -->
-    <h3>Trial </h3>
+ 
     <ul>
-        {{ macro.displayNewsList(newsList)}}
+       <h3>{{ macro.displayNewsList(newsList)}}</h3>
     </ul>
   </body>
 </html>
