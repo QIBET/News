@@ -57,7 +57,7 @@ def process_results(news_list):
 
 def get_articles(source_id):
     '''
-    Function that gets the json response to our url request for a specific source
+    Function that gets returns news article
     '''
     get_articles_url = articles_url.format(source_id,api_key)
 
@@ -88,11 +88,11 @@ def process_articles_results(articles_list):
         author = article.get('author')
         title = article.get('title')
         description = article.get('description')
-        url = article.get('url')
-        image = article.get('urlToImage')
+        urlToImage = article.get('urlToImage')
         publishedAt = article.get('publishedAt')
+        url = article.get('url')
 
-        article_object = Article(author,title,description,url,image,publishedAt)
+        article_object = Article(author,title,description,urlToImage,publishedAt,url)
         article_results.append(article_object)
 
     return article_results
