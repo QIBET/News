@@ -55,11 +55,11 @@ def process_results(news_list):
     
     return news_results
 
-def get_articles(source_id):
+def get_articles(id):
     '''
     Function that gets returns news article
     '''
-    get_articles_url = articles_url.format(source_id,api_key)
+    get_articles_url = articles_url.format(id,api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
@@ -85,14 +85,15 @@ def process_articles_results(articles_list):
     article_results = []
 
     for article in articles_list:
+        id = article.get('id')
         author = article.get('author')
         title = article.get('title')
         description = article.get('description')
-        urlToImage = article.get('urlToImage')
+        image = article.get('urlToImage')
         publishedAt = article.get('publishedAt')
         url = article.get('url')
 
-        article_object = Article(author,title,description,urlToImage,publishedAt,url)
+        article_object = Article(id,author,title,description,image,publishedAt,url)
         article_results.append(article_object)
 
     return article_results
