@@ -1,9 +1,9 @@
 from flask import render_template,request,redirect,url_for
-from app import app
-from .request import get_sources,get_articles
+from . import main
+from ..request import get_sources,get_articles
 
 #Views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     Function that returns the index page and its data
@@ -17,7 +17,7 @@ def index():
     title = 'Home - News Site'
     return render_template('index.html', title = title, newsList = get_news)
 
-@app.route('/articles/<id>')
+@main.route('/articles/<id>')
 def article(id):
 
     '''
