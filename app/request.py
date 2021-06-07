@@ -2,8 +2,6 @@ import urllib.request,json
 from .models import Article,Source
 
 
-Article = article.Article
-Source = source.Source
 
 
 #Getting the API key
