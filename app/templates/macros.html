@@ -2,7 +2,7 @@
 
         {% for source_news in newsList  %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 block" >
-                <h4 style="color: maroon;">{{ source_news.name}}</h4>
+                <h4 style="color: green;">{{ source_news.name}}</h4>
                 <p>{{source_news.description}}</p>
                 <a href="/articles/{{source_news.id}}" class="btn btn-info btn-sm">More on {{source_news.name}}</a>
             </div>
@@ -16,7 +16,7 @@
                 <h4 style="color: teal;">{{article.title}}</h4>
                 <p>{{article.description}}</p>
                 <p>Published: {{article.publishedAt}}</p>
-                <a href="{{article.url}}" class="btn btn-success btn-sm">Visit Website</a>
+                <a href="{{article.url}}" class="btn btn-success btn-sm">Visit Website-Get the full story</a>
             </div>
         {%endif%}
     {% endfor %}
